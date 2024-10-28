@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,11 +26,12 @@ public class ShoppingCart {
         return items;
     }
 
-    public void applyDiscount(double percentOff) {
+    public short applyDiscount(double percentOff) {
         discount = percentOff;
         for(String item : items.keySet()){
-            double newPrice = items.get(item)*percentOff;
+            double newPrice = items.get(item)*(1-(percentOff*0.01));
             items.replace(item, newPrice);
         }
+        return 0;
     }
 }
