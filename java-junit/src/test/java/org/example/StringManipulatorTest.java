@@ -8,9 +8,15 @@ class StringManipulatorTest {
 
     @Test
     void reverseStringTest() {
-        /**
-         *
-         */
+        String TrueExample = "hannah";
+        String FalseExample = "word";
+
+        String resultTrue = StringManipulator.reverseString(TrueExample);
+        String resulFalse = StringManipulator.reverseString(FalseExample);
+
+
+        assertEquals("hannah", resultTrue);
+        assertEquals("drow", resulFalse);
 
     }
 
