@@ -6,16 +6,9 @@ import java.util.Map;
 
 public class ShoppingCart {
 
-    public Map<String, Double> getItems() {
-        return items;
-    }
-
-    public void setItems(Map<String, Double> items) {
-        this.items = items;
-    }
+    double discount;
 
     private static Map<String, Double> items = new HashMap<>();
-
 
     public Map<String, Double> addItems(String itemName, double price) {
         items.put(itemName, price);
@@ -27,8 +20,18 @@ public class ShoppingCart {
         for(double i : items.values()) {
             totalPrice += i;
         }
-
         return totalPrice;
+    }
 
+    public static Map<String, Double> getItems() {
+        return items;
+    }
+
+    public void applyDiscount(double percentOff) {
+        discount = percentOff;
+        for(String item : items.keySet()){
+            double newPrice = items.get(item)*percentOff;
+            items.replace(item, newPrice);
+        }
     }
 }

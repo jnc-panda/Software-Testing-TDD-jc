@@ -18,8 +18,6 @@ class ShoppingCartTest {
 
         assertEquals(new ShoppingCart().addItems("apple", 1), cart1.getItems());
 
-
-
     }
 
     @Test
@@ -32,10 +30,8 @@ class ShoppingCartTest {
         cart1.addItems("bread", 0.9);
         cart1.addItems("pasta", 5);
 
-
-
         assertEquals(20.9, cart1.totalPrice(cart1.getItems()));
-
-
     }
+
+
 }
