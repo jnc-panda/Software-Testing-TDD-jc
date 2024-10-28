@@ -14,15 +14,15 @@ public class ShoppingCart {
         this.items = items;
     }
 
-    private Map<String, Double> items = new HashMap<>();
+    private static Map<String, Double> items = new HashMap<>();
 
 
-    public static Map<String, Double> addItems(String itemName, double price) {
+    public Map<String, Double> addItems(String itemName, double price) {
         items.put(itemName, price);
         return items;
     }
 
-    public double totalPrice(HashMap<String, Double> items) {
+    public double totalPrice(Map<String, Double> items) {
         double totalPrice = 0;
         for(double i : items.values()) {
             totalPrice += i;

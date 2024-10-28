@@ -49,7 +49,7 @@ class CompassTest {
     @DisplayName("Returns correct point when rotating right ")
     // returns East when passed North Point and Right Direction
     public void compassCanRotateLeft() {
-        Compass.Point resultOutput;
+        //Compass.Point resultOutput;
 
         Compass.Point northResultOutput = Compass.rotate(Compass.Point.NORTH, Compass.Direction.LEFT);
         Compass.Point southResultOutput = Compass.rotate(Compass.Point.SOUTH, Compass.Direction.LEFT);
